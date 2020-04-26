@@ -1,6 +1,6 @@
 const { db } = require("../util/admin");
 
-exports.getSlots = (req, res) => {
+exports.getServiceTypes = (req, res) => {
   let slotData = {};
 
   db.doc(`/stores/${req.params.storeId}`)
@@ -10,18 +10,16 @@ exports.getSlots = (req, res) => {
         return res.status(404).json({ error: "Store not found" });
       }
       return db
-        .collection("slots")
+        .collection("serviceTypes")
         .where("storeId", "==", req.params.storeId)
-        .where("slotDate", "==", req.params.slotDate)
-        .where("serviceId", "==", req.params.serviceId)
         .get();
     })
     .then(data => {
-      slotData.slots = [];
+      serviceTypes = [];
       data.forEach(doc => {
-        slotData.slots.push({ slotId: doc.id, data: doc.data() });
+        serviceTypes.push({ serviceId: doc.id, serviceDetails: doc.data() });
       });
-      return res.json(slotData);
+      return res.json(serviceTypes);
     })
     .catch(err => {
       console.error(err);

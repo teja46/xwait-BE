@@ -6,8 +6,12 @@ exports.addStore = (req, res) => {
     storeAddress: req.body.storeAddress,
     storeArea: req.body.storeArea,
     createdAt: new Date().toISOString(),
-    type: req.body.type
+    type: req.body.type,
+    rating: 0,
+    startTime: req.body.startTime,
+    endTime: req.body.endTime
   };
+
   db.collection("stores")
     .add(storeData)
     .then(doc => {

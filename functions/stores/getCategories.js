@@ -1,7 +1,8 @@
 const { db } = require("../util/admin");
 
-exports.getStores = (req, res) => {
+exports.getCategories = (req, res) => {
   db.collection("stores")
+    .where("type", "==", req.params.type)
     .get()
     .then(data => {
       let stores = [];
@@ -10,10 +11,7 @@ exports.getStores = (req, res) => {
           id: doc.id,
           name: doc.data().name,
           storeAddress: doc.data().storeAddress,
-          storeArea: doc.data().storeAream,
-          rating: doc.data().rating,
-          startTime: doc.data().startTime,
-          endTime: doc.data().endTime
+          storeArea: doc.data().storeAream
         });
       });
       return res.json(stores);

@@ -2,24 +2,22 @@ const { db } = require("../util/admin");
 const moment = require("moment");
 
 exports.postSlot = (req, res) => {
-  const postSlot = {
-    storeId: req.params.storeId,
-    slotTime: req.params.slotTime,
-    totalSlots: req.body.totalSlots,
-    createdAt: new Date().toISOString(),
-    remainingSlots: req.body.totalSlots
-  };
+  let dt = new Date(req.body.slotDate);
+  console.log(dt);
+  dt.setHours(0, 0, 0, 0);
+  // let isoDate = dt.toISOString();
+  const slots = req.body.slots;
 
-  db.doc(`/stores/${req.params.storeId}`)
+  db.doc(`/stores/${req.body.storeId}`)
     .get()
     .then(doc => {
       if (!doc.exists) {
         return res.status(404).json({ error: "Store not found" });
       }
-      return db.collection("slots").add(postSlot);
+      return slots.forEach(slot => db.collection("slots").add(slot));
     })
     .then(() => {
-      return res.json(postSlot);
+      return res.json(slots);
     })
     .catch(err => {
       console.log(err);

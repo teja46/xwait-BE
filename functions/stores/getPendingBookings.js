@@ -1,6 +1,6 @@
 const { db } = require("../util/admin");
 
-exports.getSlots = (req, res) => {
+exports.getPendingBookings = (req, res) => {
   let slotData = {};
 
   db.doc(`/stores/${req.params.storeId}`)
@@ -10,18 +10,23 @@ exports.getSlots = (req, res) => {
         return res.status(404).json({ error: "Store not found" });
       }
       return db
-        .collection("slots")
+        .collection("bookSlot")
         .where("storeId", "==", req.params.storeId)
-        .where("slotDate", "==", req.params.slotDate)
-        .where("serviceId", "==", req.params.serviceId)
+        .where("bookingStatus", "==", "Pending")
         .get();
     })
     .then(data => {
-      slotData.slots = [];
+      bookingData = [];
       data.forEach(doc => {
-        slotData.slots.push({ slotId: doc.id, data: doc.data() });
+        let bookingObj = {
+          bookingStatus: doc.data().bookingStatus,
+          slotDate: doc.data().slotDate,
+          slotTime: doc.data().slotTime,
+          bookingId: doc.id
+        };
+        bookingData.push(bookingObj);
       });
-      return res.json(slotData);
+      return res.json(bookingData);
     })
     .catch(err => {
       console.error(err);

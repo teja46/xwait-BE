@@ -1,8 +1,16 @@
 const { db } = require("../util/admin");
 
 exports.getBookedSlots = (req, res) => {
+  let slotType = [];
+  if (req.params.slotType === "Current") {
+    slotType = ["Accepted", "Pending"];
+  } else {
+    slotType = ["Rejected", "Cancelled", "Redeemed"];
+  }
+  console.log(slotType);
   db.collection("bookSlot")
     .where("userId", "==", req.params.userId)
+    .where("bookingStatus", "in", slotType)
     .get()
     .then(data => {
       let slots = [];
@@ -13,9 +21,12 @@ exports.getBookedSlots = (req, res) => {
           storeAddress: doc.data().storeAddress,
           storeArea: doc.data().storeArea,
           slotId: doc.data().slotId,
-          slotCompleted: doc.data().slotCompleted,
+          serviceId: doc.data().serviceId,
+          serviceType: doc.data().serviceType,
           slotTime: doc.data().slotTime,
-          bookingId: doc.data().bookingId,
+          storeId: doc.data().storeId,
+          userId: doc.data().userId,
+          bookingId: doc.data().bookindId,
           slotDate: doc.data().slotDate,
           bookingStatus: doc.data().bookingStatus
         });

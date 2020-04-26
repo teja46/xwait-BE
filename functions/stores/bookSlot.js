@@ -6,6 +6,8 @@ exports.bookSlot = (req, res) => {
     .collection("bookSlot")
     .where("userId", "==", req.body.userId)
     .where("slotId", "==", req.body.slotId)
+    .where("serviceId", "==", req.body.serviceId)
+    .where("bookingStatus", "in", ["Accepted", "Redeemed", "Pending"])
     .limit(1);
   const slotDocument = db.doc(`/slots/${req.body.slotId}`);
   let slotData = {};
@@ -33,13 +35,14 @@ exports.bookSlot = (req, res) => {
             slotId: req.body.slotId,
             slotTime: req.body.slotTime,
             slotDate: req.body.slotDate,
-            slotCompleted: false,
             storeId: req.body.storeId,
             userId: req.body.userId,
             storeName: req.body.storeName,
+            serviceId: req.body.serviceId,
+            serviceType: req.body.serviceType,
             storeAddress: req.body.storeAddress,
             bookindId: makeId(5),
-            bookingStatus: false,
+            bookingStatus: "Pending",
             createdAt: new Date().toISOString()
           })
           .then(() => {

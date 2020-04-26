@@ -7,7 +7,8 @@ exports.redeemBooking = (req, res) => {
     .then(doc => {
       if (doc.exists) {
         bookingDoc.update({
-          slotCompleted: true
+          bookingStatus: "Redeemed",
+          createdAt: new Date().toISOString()
         });
         return res.json({ message: "updated successfully" });
       }
