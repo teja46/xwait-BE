@@ -1,0 +1,87 @@
+.header-component {
+  .x-wait-logo {
+    width: 30%;
+    height: 100%;
+
+    @media screen and (min-width: 1024px) {
+      width: 100px;
+      height: 100%;
+    }
+  }
+  .my-bookings {
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+  }
+  .user-logo {
+    width: 40px;
+    height: 40px;
+    margin-right: 20px;
+    border-radius: 100%;
+  }
+}
+
+.user-menu {
+  background: #ffffff;
+  z-index: 10001;
+  .btn-link {
+    color: #000000;
+  }
+  .icons {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.bookings-modal {
+  .modal-header {
+    background-color: #626cfe;
+    color: #ffffff;
+  }
+  .confirmation {
+    .nav-tabs {
+      border-bottom: transparent;
+      .nav-link {
+        border: transparent;
+        border-radius: 0;
+        color: #000;
+        border: transparent;
+
+        &.active {
+          border-bottom: 4px solid #626cfe;
+          border-top-right-radius: 10px;
+          border-top-left-radius: 10px;
+        }
+      }
+    }
+  }
+}
+
+.confirmation-details {
+  background: #e7e7e7 !important;
+
+  .store-name {
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  .store-address {
+    font-size: 12px;
+    margin: 0 20px;
+  }
+
+  .booking-time {
+    font-size: 16x;
+    font-weight: bold;
+  }
+
+  .booking-id {
+    font-weight: bold;
+    font-size: 37px;
+  }
+
+  .booking-action {
+    border-top: 1px solid black;
+    padding-top: 10px;
+  }
+}

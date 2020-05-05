@@ -1,0 +1,166 @@
+.supermarket-logo {
+  width: 60px;
+}
+
+.store-address {
+  margin: 2px 15px;
+}
+
+.confirmation-show {
+  &.modal-backdrop {
+    opacity: 1 !important;
+  }
+  &.slot-selection-modal {
+    opacity: 0.5;
+  }
+}
+.slotbooking-backdrop {
+  z-index: 2100 !important;
+}
+.slot-selection-modal {
+  z-index: 2101 !important;
+  .modal-dialog {
+    padding: 0;
+    margin: 0;
+    .modal-content {
+      height: 100vh;
+      width: 100vw;
+      .modal-body {
+        background: #e7e7e7;
+        min-height: 100vh;
+        .slot-card {
+          background: #fff;
+          border-radius: 10px;
+          overflow: scroll;
+
+          .super-market-details {
+            .store-address {
+              margin: 2px 15px;
+              .super-market-name {
+                font-size: 16px;
+                font-weight: bold;
+              }
+
+              .super-market-location {
+                font-size: 12px;
+              }
+            }
+          }
+
+          .change-button {
+            padding: 5px 15px;
+            border-radius: 10px;
+            box-shadow: none;
+            outline: none;
+            background: transparent;
+            border: 2px solid #f2f2f2;
+          }
+
+          .slots-spread {
+            button {
+              border: 1px solid #ece9e9;
+              background: transparent;
+              color: #444343;
+              border-top: 2px solid #626cfe;
+              font-size: 12px;
+              letter-spacing: 1.2px;
+              font-weight: 600;
+              padding: 5px 10px;
+              min-width: 100px;
+              position: relative;
+              z-index: 1;
+              margin-left: 0.5rem !important;
+              margin-bottom: 1rem !important;
+              &:disabled {
+                background: #eee;
+                pointer-events: none;
+                border-top: 2px solid #d8cdcd;
+              }
+
+              .remaining-slots {
+                font-size: 8px;
+              }
+
+              &:hover {
+                color: #fff;
+              }
+              &:after {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                transform: scaleY(0);
+                transform-origin: bottom center;
+                background: #626cfe;
+                z-index: -1;
+                transition: transform 0.3s;
+              }
+
+              &:hover::after {
+                transform: scaleY(1);
+              }
+            }
+          }
+        }
+      }
+
+      .modal-footer {
+        display: none;
+      }
+    }
+  }
+}
+.confirmation {
+  z-index: 1500;
+  width: 100%;
+  background: #fff;
+  transform: none !important;
+
+  .confirmation-details {
+    .modal-header {
+      background-color: #626cfe;
+      color: #ffffff;
+    }
+
+    .modal-body {
+      background: #e7e7e7;
+      min-height: 100vh;
+    }
+
+    .confirmation-content {
+      background: #fff;
+    }
+
+    .confirmation-heading {
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .date-time {
+      font-size: 20px;
+      font-weight: bold;
+      margin: 20px 0;
+    }
+
+    textarea {
+      resize: none;
+    }
+  }
+  .super-market-details {
+    .store-address {
+      .super-market-name {
+        font-size: 18px;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+.show-confirmation-backdrop {
+  z-index: 2200 !important;
+}
+.show-confirmation-modal {
+  z-index: 2201 !important;
+}

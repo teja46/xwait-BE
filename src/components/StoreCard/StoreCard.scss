@@ -1,0 +1,103 @@
+.card-section {
+  padding: 0 !important;
+  margin-bottom: 10px;
+
+  .store-card {
+    border: 2px solid #f9f9f9;
+    border-radius: 5px;
+    margin: 5px 10px;
+    padding: 0px !important;
+
+    .card-heading {
+      cursor: pointer;
+      padding: 10px 15px;
+      padding-bottom: 0px;
+
+      .store-image {
+        width: 100%;
+      }
+
+      .store-details {
+        .store-name {
+          color: #3b3e50;
+          font-size: 16px;
+          font-weight: bold;
+        }
+        .store-location {
+          font-size: 12px;
+        }
+
+        .icons {
+          width: 15px;
+          height: 15px;
+        }
+      }
+
+      .store-description {
+        font-size: 11px;
+        border-top: 2px solid #f9f9f9;
+        width: 100%;
+      }
+    }
+
+    .card-action {
+      font-size: 12px;
+
+      .store-rating {
+        background: #f2f2f2;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        width: 70px;
+      }
+      .sponsored-section {
+        background: #fcf4e4;
+        padding: 5px 25px;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+      }
+
+      .booknow-section {
+        margin-right: 12px;
+        button {
+          background: #fff;
+          border: none;
+          padding: 5px 25px;
+          color: #626cfe;
+          font-size: 12px;
+          border-radius: 5px;
+          font-weight: bold;
+          box-sizing: border-box;
+          border: 1px solid #626cfe;
+          position: relative;
+          z-index: 1;
+          &:hover {
+            color: #fff;
+          }
+          &:after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            transform: scaleY(0);
+            transform-origin: bottom center;
+            background: #626cfe;
+            z-index: -1;
+            transition: transform 0.3s;
+          }
+
+          &:hover::after {
+            transform: scaleY(1);
+          }
+        }
+      }
+    }
+  }
+}
+.toast {
+  .toast-header {
+    background: #626cfe;
+    color: #fff;
+  }
+}

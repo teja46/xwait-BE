@@ -1,0 +1,914 @@
+[
+   {
+      "name":"A.G.college",
+      "value":"500030 _0.7787267522800296"
+   },
+   {
+      "name":"A.Gs office",
+      "value":"500004 _0.06901245404695144"
+   },
+   {
+      "name":"A.Gs. staff quarters",
+      "value":"500045 _0.5795232368030254"
+   },
+   {
+      "name":"Administrative Buildings",
+      "value":"500007 _0.5577451042942028"
+   },
+   {
+      "name":"Afzalgunj",
+      "value":"500012 _0.2673277105138485"
+   },
+   {
+      "name":"Aliabad",
+      "value":"500015 _0.5916641195378625"
+   },
+   {
+      "name":"Ambernagar",
+      "value":"500044 _0.24935483038464978"
+   },
+   {
+      "name":"Amberpet",
+      "value":"500013 _0.2890672546980182"
+   },
+   {
+      "name":"Anandnagar",
+      "value":"500004 _0.17099134534479066"
+   },
+   {
+      "name":"Anantagiri",
+      "value":"501201 _0.5237119085351363"
+   },
+   {
+      "name":"Anantaram",
+      "value":"500015 _0.9537456454692619"
+   },
+   {
+      "name":"Andhra Mahila sabha",
+      "value":"500044 _0.5034624276950674"
+   },
+   {
+      "name":"Ankireddipalli",
+      "value":"501301 _0.32736911206309105"
+   },
+   {
+      "name":"Ankushapur",
+      "value":"501301 _0.965511100379973"
+   },
+   {
+      "name":"Annajiguda",
+      "value":"501301 _0.9797896585494565"
+   },
+   {
+      "name":"Aperl",
+      "value":"500030 _0.3827673699812444"
+   },
+   {
+      "name":"Aphb Colony moulali",
+      "value":"500040 _0.6815382490593969"
+   },
+   {
+      "name":"Ashoknagar",
+      "value":"500020 _0.08643565775948692"
+   },
+   {
+      "name":"Attapur",
+      "value":"500048 _0.7229791885703913"
+   },
+   {
+      "name":"Atvelli",
+      "value":"500015 _0.18616336612785034"
+   },
+   {
+      "name":"Badangpet",
+      "value":"500058 _0.4358288017965579"
+   },
+   {
+      "name":"Bahadurpura",
+      "value":"500064 _0.2752616434840076"
+   },
+   {
+      "name":"Balapur",
+      "value":"500005 _0.48508612336351353"
+   },
+   {
+      "name":"Banjara Hills",
+      "value":"500034 _0.42681817296215185"
+   },
+   {
+      "name":"Barkatpura",
+      "value":"500027 _0.25778905329036683"
+   },
+   {
+      "name":"Bazarghat",
+      "value":"500004 _0.7943252212816214"
+   },
+   {
+      "name":"Begumbazar",
+      "value":"500012 _0.9698510705184085"
+   },
+   {
+      "name":"Begumpet",
+      "value":"500016 _0.800319313976483"
+   },
+   {
+      "name":"Begumpet Policelines",
+      "value":"500003 _0.41175751283569006"
+   },
+   {
+      "name":"Bharat Nagar colony",
+      "value":"500018 _0.4041703655360471"
+   },
+   {
+      "name":"Bholakpur",
+      "value":"500080 _0.6823451075204716"
+   },
+   {
+      "name":"Boduppal",
+      "value":"500039 _0.7426524720058503"
+   },
+   {
+      "name":"Bogaram",
+      "value":"501301 _0.5958867707455708"
+   },
+   {
+      "name":"Central Police lines",
+      "value":"500013 _0.9449286272078241"
+   },
+   {
+      "name":"Central Secretariat",
+      "value":"500022 _0.0019394648660471248"
+   },
+   {
+      "name":"Chanchalguda",
+      "value":"500024 _0.41246790814109957"
+   },
+   {
+      "name":"Chandulalbaradari",
+      "value":"500064 _0.630489800386546"
+   },
+   {
+      "name":"Cherial",
+      "value":"501301 _0.8804094984995503"
+   },
+   {
+      "name":"Cherlapalli",
+      "value":"501301 _0.987251488830001"
+   },
+   {
+      "name":"Crp Camp",
+      "value":"500005 _0.5360507466331712"
+   },
+   {
+      "name":"Cyberabad",
+      "value":"500081 _0.7890805897896611"
+   },
+   {
+      "name":"Dabirpur",
+      "value":"500015 _0.9661229496855737"
+   },
+   {
+      "name":"Dargah Hussain shahwali",
+      "value":"500008 _0.9169494919184953"
+   },
+   {
+      "name":"Darushifa",
+      "value":"500024 _0.6485690753442517"
+   },
+   {
+      "name":"Dattatreya Colony",
+      "value":"500028 _0.6727688166121866"
+   },
+   {
+      "name":"Dhoolpet",
+      "value":"500006 _0.3943112412300518"
+   },
+   {
+      "name":"Dilsukhnagar Colony",
+      "value":"500060 _0.17981039302582258"
+   },
+   {
+      "name":"Dr As rao nagar",
+      "value":"500062 _0.704392909382787"
+   },
+   {
+      "name":"Ecil",
+      "value":"500062 _0.9216306739047853"
+   },
+   {
+      "name":"Erragadda",
+      "value":"500018 _0.6130107358667478"
+   },
+   {
+      "name":"Falaknuma",
+      "value":"500053 _0.37168218575074663"
+   },
+   {
+      "name":"Fatehdarwaza",
+      "value":"500065 _0.5483129395116231"
+   },
+   {
+      "name":"Fathenagar Colony",
+      "value":"500018 _0.6419342119134634"
+   },
+   {
+      "name":"Gagan Mahal",
+      "value":"500029 _0.31500402741244726"
+   },
+   {
+      "name":"Gajularamaram",
+      "value":"500015 _0.24097304287472854"
+   },
+   {
+      "name":"Gandhi Bhawan",
+      "value":"500001 _0.2763551676970515"
+   },
+   {
+      "name":"Gandhinagar",
+      "value":"500080 _0.6947955837558524"
+   },
+   {
+      "name":"Ghatkesar",
+      "value":"501301 _0.9176907676967003"
+   },
+   {
+      "name":"Girmapur",
+      "value":"500015 _0.10952607133751613"
+   },
+   {
+      "name":"Golconda",
+      "value":"500008 _0.0226802766156462"
+   },
+   {
+      "name":"Golconda Chowrastha",
+      "value":"500020 _0.12899079581666206"
+   },
+   {
+      "name":"Gowdavalli",
+      "value":"500015 _0.8680762028997864"
+   },
+   {
+      "name":"Gsi(sr) Bandlaguda",
+      "value":"500068 _0.3029023048962449"
+   },
+   {
+      "name":"Hanumanpet",
+      "value":"500062 _0.8806982574824767"
+   },
+   {
+      "name":"Hasannagar",
+      "value":"500052 _0.8097336756556146"
+   },
+   {
+      "name":"High Court",
+      "value":"500066 _0.3805323016518085"
+   },
+   {
+      "name":"Himayathnagar",
+      "value":"500029 _0.45050655186803756"
+   },
+   {
+      "name":"Himmatnagar",
+      "value":"500025 _0.10468554913370687"
+   },
+   {
+      "name":"Hindi Bhawan",
+      "value":"500001 _0.30820025852661925"
+   },
+   {
+      "name":"Hindustan Cables ltd",
+      "value":"500051 _0.6863286474718653"
+   },
+   {
+      "name":"Huda Residential complex",
+      "value":"500035 _0.5665562676088729"
+   },
+   {
+      "name":"Humayunnagar",
+      "value":"500028 _0.666484067282477"
+   },
+   {
+      "name":"Hussainialam",
+      "value":"500064 _0.4370925819716156"
+   },
+   {
+      "name":"Hyd Airport  ii",
+      "value":"500016 _0.6724668039775419"
+   },
+   {
+      "name":"Hyd Airport i",
+      "value":"500016 _0.22107624791458313"
+   },
+   {
+      "name":"Hyder Shah kote",
+      "value":"500008 _0.38283741043290287"
+   },
+   {
+      "name":"Hyderabad Jubilee",
+      "value":"500002 _0.4775828276090197"
+   },
+   {
+      "name":"Hyderabad Public school",
+      "value":"500013 _0.5099752670190485"
+   },
+   {
+      "name":"Hyderabad.",
+      "value":"500001 _0.02658533957097675"
+   },
+   {
+      "name":"Hyderguda",
+      "value":"500048 _0.26999458734264725"
+   },
+   {
+      "name":"I.E.nacharam",
+      "value":"500076 _0.4630222568968627"
+   },
+   {
+      "name":"I.M.colony",
+      "value":"500082 _0.6953926689814496"
+   },
+   {
+      "name":"Iict",
+      "value":"500007 _0.28062206663044265"
+   },
+   {
+      "name":"Ibrahim Bagh lines",
+      "value":"500031 _0.20938453091704523"
+   },
+   {
+      "name":"Ie Moulali",
+      "value":"500040 _0.14469079267050944"
+   },
+   {
+      "name":"Jaggamguda",
+      "value":"500015 _0.2394622777885842"
+   },
+   {
+      "name":"Jama I osmania",
+      "value":"500007 _0.21825089286781818"
+   },
+   {
+      "name":"Jeedimetla",
+      "value":"500015 _0.8570847297011062"
+   },
+   {
+      "name":"Jillellaguda",
+      "value":"500079 _0.2598205423951383"
+   },
+   {
+      "name":"Jntu Kukat pally",
+      "value":"500085 _0.3237693063142155"
+   },
+   {
+      "name":"Jubilee Hills",
+      "value":"500033 _0.7166220727768975"
+   },
+   {
+      "name":"Kakatiya Nagar",
+      "value":"500008 _0.5155947685279254"
+   },
+   {
+      "name":"Kanchanbagh",
+      "value":"500058 _0.7930076120103287"
+   },
+   {
+      "name":"Karmanghat",
+      "value":"500079 _0.8406799583652163"
+   },
+   {
+      "name":"Karwan Sahu",
+      "value":"500006 _0.4748965975133652"
+   },
+   {
+      "name":"Katchvanisingaram",
+      "value":"501301 _0.9963150404706205"
+   },
+   {
+      "name":"Kattedan Ie",
+      "value":"500077 _0.14758046127784286"
+   },
+   {
+      "name":"Keesara",
+      "value":"501301 _0.9102313759755483"
+   },
+   {
+      "name":"Keesaragutta",
+      "value":"501301 _0.718617258222505"
+   },
+   {
+      "name":"Keshogiri",
+      "value":"500005 _0.483784692905598"
+   },
+   {
+      "name":"Khairatabad",
+      "value":"500004 _0.17666541090792576"
+   },
+   {
+      "name":"Khapra",
+      "value":"500062 _0.13058262670044551"
+   },
+   {
+      "name":"Kingsway",
+      "value":"500003 _0.12365807033374066"
+   },
+   {
+      "name":"Kishanbagh",
+      "value":"500064 _0.1796734422584445"
+   },
+   {
+      "name":"Kismathpur",
+      "value":"500030 _0.6228078217961188"
+   },
+   {
+      "name":"Kolthur",
+      "value":"500015 _0.6100708463391289"
+   },
+   {
+      "name":"Korremal",
+      "value":"501301 _0.12504257418735265"
+   },
+   {
+      "name":"Kulsumpura",
+      "value":"500067 _0.8177309546042497"
+   },
+   {
+      "name":"Kushaiguda",
+      "value":"500015 _0.7017308785302738"
+   },
+   {
+      "name":"Kutbullapur",
+      "value":"500015 _0.7194945638812607"
+   },
+   {
+      "name":"Kyasaram",
+      "value":"500062 _0.302517447107024"
+   },
+   {
+      "name":"L B nagar",
+      "value":"500074 _0.7458848113660046"
+   },
+   {
+      "name":"Lic Division",
+      "value":"500063 _0.8746009079734993"
+   },
+   {
+      "name":"Lalgadi Malakpet",
+      "value":"500015 _0.9575777743966067"
+   },
+   {
+      "name":"Lallaguda",
+      "value":"500017 _0.5336416523689522"
+   },
+   {
+      "name":"Lallapet",
+      "value":"500017 _0.8280558205517947"
+   },
+   {
+      "name":"Lunger House",
+      "value":"500008 _0.33182395230242534"
+   },
+   {
+      "name":"Mg Road",
+      "value":"500003 _0.13152559946167108"
+   },
+   {
+      "name":"Madhapur",
+      "value":"500081 _0.862994470888439"
+   },
+   {
+      "name":"Malakpet Colony",
+      "value":"500036 _0.5630974086848648"
+   },
+   {
+      "name":"Mallapur",
+      "value":"500076 _0.18822127436113156"
+   },
+   {
+      "name":"Mamidipalli",
+      "value":"500005 _0.23837883633375911"
+   },
+   {
+      "name":"Mangalhat",
+      "value":"500006 _0.09776843533925783"
+   },
+   {
+      "name":"Mansoorabad",
+      "value":"500068 _0.681665961864411"
+   },
+   {
+      "name":"Moazzampura",
+      "value":"500001 _0.25725280789988303"
+   },
+   {
+      "name":"Moghalpura",
+      "value":"500002 _0.37071665457510594"
+   },
+   {
+      "name":"Moosapet",
+      "value":"500018 _0.293064156653313"
+   },
+   {
+      "name":"Moulali",
+      "value":"500040 _0.4018297732096967"
+   },
+   {
+      "name":"Mudchintanapalli",
+      "value":"500015 _0.22319258236371242"
+   },
+   {
+      "name":"Murad Nagar",
+      "value":"500028 _0.8827935149958552"
+   },
+   {
+      "name":"Musheerabad Dso",
+      "value":"500020 _0.3095995893752399"
+   },
+   {
+      "name":"Musheerabad Ndso",
+      "value":"500020 _0.3058013771506214"
+   },
+   {
+      "name":"Nallakunta",
+      "value":"500044 _0.5055879952399456"
+   },
+   {
+      "name":"Nanakramguda",
+      "value":"500008 _0.5636876073758386"
+   },
+   {
+      "name":"Napier Lines",
+      "value":"500062 _0.9766318700992602"
+   },
+   {
+      "name":"Narayanguda",
+      "value":"500029 _0.20061854695602754"
+   },
+   {
+      "name":"Nehrunagar",
+      "value":"500026 _0.05431577783190478"
+   },
+   {
+      "name":"New Maruthi nagar",
+      "value":"500060 _0.7186438484441982"
+   },
+   {
+      "name":"New Mla quarters",
+      "value":"500063 _0.39461909192905864"
+   },
+   {
+      "name":"New Nallakunta",
+      "value":"500044 _0.8774961467701534"
+   },
+   {
+      "name":"Ngri",
+      "value":"500007 _0.6029497533981998"
+   },
+   {
+      "name":"Nimboliadda",
+      "value":"500027 _0.1530050476177942"
+   },
+   {
+      "name":"Nutankal",
+      "value":"500015 _0.2303531801036287"
+   },
+   {
+      "name":"Old Malakpet",
+      "value":"500036 _0.33904961268264167"
+   },
+   {
+      "name":"Old Mla quarters",
+      "value":"500029 _0.22237745899125527"
+   },
+   {
+      "name":"Osmania General hospital",
+      "value":"500012 _0.46921647629809393"
+   },
+   {
+      "name":"Osmannagar",
+      "value":"500036 _0.2649858012538635"
+   },
+   {
+      "name":"P & t colony",
+      "value":"500060 _0.19291449089777601"
+   },
+   {
+      "name":"Padmaraonagar",
+      "value":"500025 _0.3809075445021035"
+   },
+   {
+      "name":"Padmavathi Nagar",
+      "value":"500004 _0.8667863071976658"
+   },
+   {
+      "name":"Pahadishareef",
+      "value":"500005 _0.4355089455407366"
+   },
+   {
+      "name":"Parishram Bhawan",
+      "value":"500004 _0.9070210879052023"
+   },
+   {
+      "name":"Pedalaxmapur",
+      "value":"500015 _0.44701563805726163"
+   },
+   {
+      "name":"Peerzadiguda",
+      "value":"500039 _0.7933732649687129"
+   },
+   {
+      "name":"Picket",
+      "value":"500003 _0.7019336273746135"
+   },
+   {
+      "name":"Pragatinagar",
+      "value":"500015 _0.6090532407428884"
+   },
+   {
+      "name":"Prakashamnagar",
+      "value":"500016 _0.226328738811844"
+   },
+   {
+      "name":"Pratapsingaram",
+      "value":"501301 _0.6206549689980576"
+   },
+   {
+      "name":"Putlibowli",
+      "value":"500095 _0.591042421927892"
+   },
+   {
+      "name":"Quazipura",
+      "value":"500065 _0.3405605994690739"
+   },
+   {
+      "name":"R.C.imarat",
+      "value":"500069 _0.9754442245878361"
+   },
+   {
+      "name":"Rahmath Nagar",
+      "value":"500045 _0.878811753532923"
+   },
+   {
+      "name":"Rail Nilayam",
+      "value":"500071 _0.0012039062595636807"
+   },
+   {
+      "name":"Raj Bhawan",
+      "value":"500041 _0.9050558838187539"
+   },
+   {
+      "name":"Rajbolaram",
+      "value":"500016 _0.9063505008702881"
+   },
+   {
+      "name":"Rajendranagar",
+      "value":"500030 _0.07852710582203137"
+   },
+   {
+      "name":"Ramakrishanapuram",
+      "value":"500035 _0.12908898158511017"
+   },
+   {
+      "name":"Ramakrishna Mutt",
+      "value":"500029 _0.7283284139739554"
+   },
+   {
+      "name":"Ramkoti",
+      "value":"500095 _0.7301519073429534"
+   },
+   {
+      "name":"Rampallidiara",
+      "value":"501301 _0.044889336403408864"
+   },
+   {
+      "name":"Rangareddy Dt courts",
+      "value":"500074 _0.6143157690921068"
+   },
+   {
+      "name":"Ravalkol",
+      "value":"500015 _0.86381260078005"
+   },
+   {
+      "name":"Reinbazar",
+      "value":"500023 _0.5931002906078602"
+   },
+   {
+      "name":"Rompalli",
+      "value":"501301 _0.42740191873902345"
+   },
+   {
+      "name":"Sahifa",
+      "value":"500024 _0.9711103449327583"
+   },
+   {
+      "name":"Saidabad",
+      "value":"500059 _0.19332905325938832"
+   },
+   {
+      "name":"Saidabad Colony",
+      "value":"500059 _0.9800894497965644"
+   },
+   {
+      "name":"Sainagar",
+      "value":"500017 _0.2950389981832575"
+   },
+   {
+      "name":"Sakkubai Nagar",
+      "value":"500008 _0.06813867393310957"
+   },
+   {
+      "name":"Sanath Nagar colony",
+      "value":"500018 _0.0837822330737028"
+   },
+   {
+      "name":"Sanathnagar I e",
+      "value":"500018 _0.032149558991930505"
+   },
+   {
+      "name":"Sanjeev Reddy nagar",
+      "value":"500038 _0.007522919351681923"
+   },
+   {
+      "name":"Santoshnagar Colony",
+      "value":"500059 _0.5959647109665378"
+   },
+   {
+      "name":"Saroornagar",
+      "value":"500035 _0.11223203212887678"
+   },
+   {
+      "name":"Secunderabad",
+      "value":"500003 _0.8270024469169719"
+   },
+   {
+      "name":"Seetharampet",
+      "value":"500001 _0.2125755517744059"
+   },
+   {
+      "name":"Seminary",
+      "value":"500013 _0.010881054717831073"
+   },
+   {
+      "name":"Shahalibanda",
+      "value":"500065 _0.9840671789307431"
+   },
+   {
+      "name":"Shantinagar",
+      "value":"500028 _0.6153053513954787"
+   },
+   {
+      "name":"Shivarampalli",
+      "value":"500052 _0.15644995047907773"
+   },
+   {
+      "name":"Shyam Nagar",
+      "value":"500004 _0.28192806134309034"
+   },
+   {
+      "name":"Sitaphalmandi",
+      "value":"500061 _0.32891109030379817"
+   },
+   {
+      "name":"Snehapuri Colony",
+      "value":"500076 _0.6049117477461614"
+   },
+   {
+      "name":"Somajiguda",
+      "value":"500082 _0.0453093971336338"
+   },
+   {
+      "name":"South Banjara hills",
+      "value":"500033 _0.8275158715446667"
+   },
+   {
+      "name":"Srinagar Colony",
+      "value":"500073 _0.899050145601417"
+   },
+   {
+      "name":"Srinivasapuram",
+      "value":"500013 _0.6344432344684994"
+   },
+   {
+      "name":"Sripuram Colony",
+      "value":"500036 _0.38162006714811314"
+   },
+   {
+      "name":"State Bank of hyderabad",
+      "value":"500001 _0.0508469114414043"
+   },
+   {
+      "name":"State Bank of india",
+      "value":"500095 _0.5199072257037354"
+   },
+   {
+      "name":"Stn Kachiguda",
+      "value":"500027 _0.07487948016187795"
+   },
+   {
+      "name":"Sultanshahi",
+      "value":"500065 _0.22452684458621253"
+   },
+   {
+      "name":"Suraram",
+      "value":"500015 _0.783632026428368"
+   },
+   {
+      "name":"Survey Of india",
+      "value":"500039 _0.23720595863315275"
+   },
+   {
+      "name":"Svpnpa",
+      "value":"500052 _0.3375454704737919"
+   },
+   {
+      "name":"Swarajyanagar",
+      "value":"500018 _0.713789208053982"
+   },
+   {
+      "name":"Tadbun",
+      "value":"500064 _0.04178189224652873"
+   },
+   {
+      "name":"Tagarikanaka",
+      "value":"500002 _0.06294842627159758"
+   },
+   {
+      "name":"Tarnaka",
+      "value":"500007 _0.031123055772638075"
+   },
+   {
+      "name":"Thimmaipalli",
+      "value":"501301 _0.07915926150063912"
+   },
+   {
+      "name":"Thumkunta",
+      "value":"500015 _0.5016989204363593"
+   },
+   {
+      "name":"Toli Chowki",
+      "value":"500008 _0.5846145160132399"
+   },
+   {
+      "name":"Turkapalliyadaram",
+      "value":"500080 _0.5901356352645797"
+   },
+   {
+      "name":"Uppal",
+      "value":"500039 _0.12024678124375221"
+   },
+   {
+      "name":"Uppuguda",
+      "value":"500053 _0.24698659353015784"
+   },
+   {
+      "name":"Vaidehinagar",
+      "value":"500070 _0.7932033440987598"
+   },
+   {
+      "name":"Vaishalinagar",
+      "value":"500079 _0.13299963913213175"
+   },
+   {
+      "name":"Vanastalipuram",
+      "value":"500070 _0.09956049197287387"
+   },
+   {
+      "name":"Vengal Rao nagar",
+      "value":"500038 _0.22300660721955934"
+   },
+   {
+      "name":"Vidhan Sabha",
+      "value":"500004 _0.18954873873083478"
+   },
+   {
+      "name":"Vidyanagar",
+      "value":"500044 _0.07254101103668242"
+   },
+   {
+      "name":"Vijay Nagar colony",
+      "value":"500057 _0.8262032203316847"
+   },
+   {
+      "name":"Vikarabad",
+      "value":"501101 _0.5094349698523921"
+   },
+   {
+      "name":"Yadgarpalli",
+      "value":"501301 _0.3938287744413731"
+   },
+   {
+      "name":"Yakutpura",
+      "value":"500023 _0.2706713247778716"
+   },
+   {
+      "name":"Yousufguda",
+      "value":"500045 _0.10342564987021419"
+   },
+   {
+      "name":"Zamistanpur",
+      "value":"500020 _0.7667545804188591"
+   },
+   {
+      "name":"Zindatelismath",
+      "value":"500013 _0.584074413268503"
+   }
+]

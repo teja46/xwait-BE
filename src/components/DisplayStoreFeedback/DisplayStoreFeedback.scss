@@ -1,0 +1,28 @@
+.store-reviews-backdrop {
+  z-index: 3000 !important;
+}
+.store-reviews {
+  z-index: 3001 !important;
+}
+
+.feedback-card {
+  border: 1px solid #f2f2f2;
+  padding: 10px;
+  margin: 10px 0;
+  .user-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+  }
+  .review {
+    font-size: 14px;
+    &ed-date {
+      font-size: 12px;
+      color: #8a8686;
+    }
+    &er-name {
+      font-size: 18px;
+      font-weight: bold;
+    }
+  }
+}
