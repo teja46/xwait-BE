@@ -11,7 +11,15 @@ exports.getCategories = (req, res) => {
           id: doc.id,
           name: doc.data().name,
           storeAddress: doc.data().storeAddress,
-          storeArea: doc.data().storeAream
+          storeArea: doc.data().storeAream,
+          rating: doc.data().rating,
+          startTime: doc.data().startTime,
+          endTime: doc.data().endTime,
+          latitude: doc.data().latitude,
+          longitude: doc.data().longitude,
+          startPrice: doc.data().startPrice,
+          storeDescription: doc.data().description,
+          storeImage: doc.data().storeImg
         });
       });
       return res.json(stores);

@@ -1,6 +1,10 @@
 const { db } = require("../util/admin");
 
 exports.getBookedSlots = (req, res) => {
+  res.set("Access-Control-Allow-Origin", "*");
+  res.set("Access-Control-Allow-Methods", "GET");
+  res.set("Access-Control-Allow-Headers", "Content-Type");
+  res.set("Access-Control-Max-Age", "3600");
   let slotType = [];
   if (req.params.slotType === "Current") {
     slotType = ["Accepted", "Pending"];
@@ -28,7 +32,13 @@ exports.getBookedSlots = (req, res) => {
           userId: doc.data().userId,
           bookingId: doc.data().bookindId,
           slotDate: doc.data().slotDate,
-          bookingStatus: doc.data().bookingStatus
+          bookingStatus: doc.data().bookingStatus,
+          storeImage: doc.data().storeImage,
+          storeLatitude: doc.data().storeLatitude,
+          storeLongitude: doc.data().storeLongitude,
+          startTime: doc.data().startTime,
+          endTime: doc.data().endTime,
+          servicePrice: doc.data().servicePrice
         });
       });
       return res.json(slots);

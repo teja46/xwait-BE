@@ -1,5 +1,5 @@
 module.exports = {
-  apiKey: "AIzaSyA6oW05ZfGF3x9qsS3c-FW0Ps_FKHeWtLw",
+  apiKey: "AIzaSyA_GMevrByxkGuh3ZDiYH0Ph3kJruoci-0",
   authDomain: "xwaitsolution.firebaseapp.com",
   databaseURL: "https://xwaitsolution.firebaseio.com",
   projectId: "xwaitsolution",

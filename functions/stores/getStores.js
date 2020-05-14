@@ -1,6 +1,10 @@
 const { db } = require("../util/admin");
 
 exports.getStores = (req, res) => {
+  res.set("Access-Control-Allow-Origin", "*");
+  res.set("Access-Control-Allow-Methods", "GET");
+  res.set("Access-Control-Allow-Headers", "Content-Type");
+  res.set("Access-Control-Max-Age", "3600");
   db.collection("stores")
     .get()
     .then(data => {
@@ -13,7 +17,12 @@ exports.getStores = (req, res) => {
           storeArea: doc.data().storeAream,
           rating: doc.data().rating,
           startTime: doc.data().startTime,
-          endTime: doc.data().endTime
+          endTime: doc.data().endTime,
+          latitude: doc.data().latitude,
+          longitude: doc.data().longitude,
+          startPrice: doc.data().startPrice,
+          storeDescription: doc.data().description,
+          storeImage: doc.data().storeImg
         });
       });
       return res.json(stores);

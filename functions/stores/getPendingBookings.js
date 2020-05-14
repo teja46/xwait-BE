@@ -1,6 +1,10 @@
 const { db } = require("../util/admin");
 
 exports.getPendingBookings = (req, res) => {
+  res.set("Access-Control-Allow-Origin", "*");
+  res.set("Access-Control-Allow-Methods", "GET");
+  res.set("Access-Control-Allow-Headers", "Content-Type");
+  res.set("Access-Control-Max-Age", "3600");
   let slotData = {};
 
   db.doc(`/stores/${req.params.storeId}`)
@@ -22,7 +26,11 @@ exports.getPendingBookings = (req, res) => {
           bookingStatus: doc.data().bookingStatus,
           slotDate: doc.data().slotDate,
           slotTime: doc.data().slotTime,
-          bookingId: doc.id
+          id: doc.id,
+          userName: doc.data().userName,
+          userEmail: doc.data().userEmail,
+          phoneNumber: doc.data().phoneNumber,
+          bookingId: doc.data().bookindId
         };
         bookingData.push(bookingObj);
       });

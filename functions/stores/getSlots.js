@@ -1,6 +1,10 @@
 const { db } = require("../util/admin");
 
 exports.getSlots = (req, res) => {
+  res.set("Access-Control-Allow-Origin", "*");
+  res.set("Access-Control-Allow-Methods", "GET");
+  res.set("Access-Control-Allow-Headers", "Content-Type");
+  res.set("Access-Control-Max-Age", "3600");
   let slotData = {};
 
   db.doc(`/stores/${req.params.storeId}`)

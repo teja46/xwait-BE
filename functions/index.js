@@ -7,6 +7,7 @@ const { db, admin } = require("./util/admin");
 const { signUp, login } = require("./users/users");
 const { signupGoogleUser } = require("./users/signupGoogleUser");
 const { updateUserToken } = require("./users/updateUserToken");
+const { contactUs } = require("./users/contactUs");
 const { addStore } = require("./stores/addStore");
 const { postSlot } = require("./stores/postSlot");
 const { getSlots } = require("./stores/getSlots");
@@ -23,6 +24,10 @@ const { completeBooking } = require("./stores/completeBooking");
 const { getPendingBookings } = require("./stores/getPendingBookings");
 const { changeBookingStatus } = require("./stores/changeBookingStatus");
 const { submitFeedback } = require("./stores/submitFeedback");
+const { updateStoreToken } = require("./stores/updateStoreToken");
+const { getFeedbackData } = require("./stores/getFeedbackData");
+const { allBookedSlots } = require("./stores/allBookedSlots");
+const { bookingHistory } = require("./stores/bookingHistory");
 
 app.use(cors());
 // User Login
@@ -30,6 +35,7 @@ app.post("/signup", signUp);
 app.post("/signupGoogleUser", signupGoogleUser);
 app.post("/login", login);
 app.post("/updateUserToken", updateUserToken);
+app.post("/updateStoreToken", updateStoreToken);
 
 // store end and on boarding slots
 app.post("/addStore", addStore);
@@ -74,12 +80,54 @@ app.post("/completeBooking", completeBooking);
 app.post("/changeBookingStatus", changeBookingStatus);
 
 app.post("/submitFeedback", submitFeedback);
+app.post("/contacDetails", contactUs);
+
+// get feedbackData
+app.get("/getFeedbackData/:storeId", getFeedbackData);
+
+// get all booked viewSlots
+app.get("/allBookedSlots", allBookedSlots);
+app.get("/bookingHistory/:bookingDate/:storeId", bookingHistory);
 
 exports.createNotificationOnCreate = functions.firestore
   .document(`bookSlot/{slotId}`)
   .onCreate(snapshot => {
     const data = snapshot.data();
     console.log(data);
+    db.doc(`/stores/${data.storeId}`)
+      .get()
+      .then(doc => {
+        console.log(doc.data());
+        if (doc.data().token && doc.exists) {
+          let message = {
+            notification: {
+              title: "New booking created",
+              body: "You have a new booking!!"
+            },
+            webpush: {
+              notification: {
+                title: "New booking created",
+                body: "You have a new booking!!"
+              },
+              fcm_options: {
+                link: "https://www.google.com"
+              }
+            },
+            token: doc.data().token
+          };
+          admin
+            .messaging()
+            .send(message)
+            .then(response => {
+              // Response is a message ID string.
+              console.log("Successfully sent message:", response);
+            })
+            .catch(error => {
+              console.log("Error sending message:", error);
+            });
+        }
+      })
+      .catch(err => console.log(err));
   });
 
 exports.createNotificationOnUpdate = functions.firestore
