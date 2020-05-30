@@ -2,11 +2,15 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.scss";
 import App from "./App";
+import StoreModal from "./components/StoreModal/StoreModal";
 import * as serviceWorker from "./serviceWorker";
 import "bootstrap/dist/css/bootstrap.min.css";
+
+const locUrl = window.location.search.split("page=")[1];
+
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    {locUrl ? <StoreModal storeCode={locUrl} /> : <App />}
   </React.StrictMode>,
   document.getElementById("root")
 );

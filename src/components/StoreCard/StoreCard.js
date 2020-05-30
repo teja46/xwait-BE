@@ -3,6 +3,7 @@ import "./StoreCard.scss";
 import locationIcon from "../../assets/images/location-icon.png";
 import timeIcon from "../../assets/images/time-icon.png";
 import StoreDetailsModal from "../StoreDetailsModal/StoreDetailsModal";
+import StoreModal from "../StoreModal/StoreModal";
 import StarRatingComponent from "react-star-rating-component";
 import getDistance from "../../utils/distance";
 import { ellipsifyText } from "../../utils/utils";
@@ -12,22 +13,36 @@ function StoreCard(props) {
     false
   );
 
+  const [showStoreModal, setShowStoreModal] = React.useState(false);
+
+  // const [windowState, setWindowState] = React.useState("showStoreDetails");
+
   const displayShowDetailsModal = () => {
-    window.history.pushState(
-      { page: "showStoreDetails" },
-      "title 2",
-      "?page=1"
-    );
+    // window.history.pushState(
+    //   { page: "showStoreDetails" },
+    //   "title 2",
+    //   `?page=${props.storeDetails.name.split(" ")[0].toLowerCase()}`
+    // );
     setShowStoreDetailsModal(true);
   };
+  // console.log(locUrl);
+  // console.log(storeName);
+  React.useEffect(() => {
+    const locUrl = window.location.search.split("page=")[1];
+    const storeName = props.storeDetails.name.split(" ")[0].toLowerCase();
+    if (locUrl && locUrl === storeName) {
+      // setWindowState(locUrl);
+      setShowStoreModal(true);
+    }
+  });
 
-  const bookingSuccess = res => {
+  const bookingSuccess = (res) => {
     setShowStoreDetailsModal(false);
     props.showToast(res);
   };
   return (
     <div className="col-sm-12 col-md-6 col-xs-12 col-lg-6 card-section">
-      <div className="store-card">
+      <div className="store-card mt-2 mb-2">
         <div
           className="row card-heading d-flex"
           onClick={() => displayShowDetailsModal()}
@@ -55,7 +70,7 @@ function StoreCard(props) {
                 <div className="store-distance d-flex align-items-center justify-content-between">
                   <img src={locationIcon} alt="rating" className="icons mr-2" />{" "}
                   <span className="ratingDigit">
-                    {props.userLocation.latitude
+                    {props.userLocation && props.userLocation.latitude
                       ? getDistance(
                           props.userLocation.latitude,
                           props.userLocation.longitude,
@@ -110,7 +125,18 @@ function StoreCard(props) {
           userLocation={props.userLocation}
           userId={props.userId}
           close={() => setShowStoreDetailsModal(false)}
-          bookingSuccess={res => bookingSuccess(res)}
+          bookingSuccess={(res) => bookingSuccess(res)}
+        />
+      )}
+
+      {showStoreModal && (
+        <StoreModal
+          storeDetails={props.storeDetails}
+          userDetails={props.userDetails}
+          userLocation={props.userLocation}
+          userId={props.userId}
+          close={() => setShowStoreDetailsModal(false)}
+          bookingSuccess={(res) => bookingSuccess(res)}
         />
       )}
     </div>

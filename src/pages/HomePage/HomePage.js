@@ -17,7 +17,7 @@ import {
   storesIcon,
   beautyIcon,
   restaurantIcon,
-  servicesIcon
+  servicesIcon,
 } from "../../assets/imageFiles";
 
 function HomePage(props) {
@@ -35,40 +35,48 @@ function HomePage(props) {
   React.useEffect(() => {
     async function fetchData() {
       getLocation()
-        .then(res => {
+        .then((res) => {
           console.log(res);
           setUserLocation(res.coords);
+          return getStores();
         })
-        .catch(err => {
+
+        .catch((err) => {
           const coords = {
             latitude: 0,
-            longitude: 0
+            longitude: 0,
           };
           setUserLocation(coords);
+          return getStores();
+        })
+        .then((res) => {
+          setStores(res.data);
+          setAllCategories(res.data);
+          setLoader(false);
         });
 
       getStores()
-        .then(res => {
+        .then((res) => {
           setStores(res.data);
           setAllCategories(res.data);
           setLoader(false);
         })
-        .catch(err => {
+        .catch((err) => {
           props.logout();
         });
     }
     fetchData();
-  }, [props]);
+  }, []);
 
-  const searchFor = type => {
+  const searchFor = (type) => {
     setLoader(true);
     setCategoryType(type);
     getCategories(type)
-      .then(res => {
+      .then((res) => {
         setStores(res.data);
         setLoader(false);
       })
-      .catch(err => {
+      .catch((err) => {
         alert(err);
       });
   };
@@ -77,11 +85,11 @@ function HomePage(props) {
     setLoader(true);
     setCategoryType("All Categories");
     getStores()
-      .then(res => {
+      .then((res) => {
         setStores(res.data);
         setLoader(false);
       })
-      .catch(err => {
+      .catch((err) => {
         alert(err);
       });
   };
@@ -94,13 +102,13 @@ function HomePage(props) {
     setShowSearchResults(true);
   };
 
-  const searchForType = event => {
+  const searchForType = (event) => {
     if (event.key === "Enter") {
       searchFields();
     }
   };
 
-  const showConfirmation = res => {
+  const showConfirmation = (res) => {
     setShowToast(true);
     setBookingDetails(res.data);
   };
@@ -124,8 +132,8 @@ function HomePage(props) {
                   minLength={2}
                   placeholder="Search Stores, Salons and more"
                   className="search-field"
-                  onKeyPress={event => searchForType(event)}
-                  onChange={event => setSearchText(event.target.value)}
+                  onKeyPress={(event) => searchForType(event)}
+                  onChange={(event) => setSearchText(event.target.value)}
                 />
                 <img
                   src={searchIcon}
@@ -388,7 +396,7 @@ function HomePage(props) {
                 userDetails={props.userDetails}
                 userLocation={userLocation}
                 userId={props.userId}
-                showToast={res => showConfirmation(res)}
+                showToast={(res) => showConfirmation(res)}
               />
             ))}{" "}
           </div>

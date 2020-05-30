@@ -107,18 +107,14 @@ export default function BookingConfirmed(props) {
               </div>
             </div>
             <div>
-              <div className="bb-grey mt-2 mb-2 pb-2">
-                <div className="dark-grey">Booked For</div>
-                <div className="font-weight-bold">
-                  {props.bookingDetails.userName}
+              {props.bookingDetails.userName && (
+                <div className="bb-grey mt-2 mb-2 pb-2">
+                  <div className="dark-grey">Booked For</div>
+                  <div className="font-weight-bold">
+                    {props.bookingDetails.userName}
+                  </div>
                 </div>
-              </div>
-              <div className="bb-grey mt-2 mb-2 pb-2">
-                <div className="dark-grey">Booking Email Address</div>
-                <div className="font-weight-bold">
-                  {props.bookingDetails.userEmail}
-                </div>
-              </div>
+              )}
               <div className="bb-grey mt-2 mb-2 pb-2">
                 <div className="dark-grey">Booking Phone Number</div>
                 <div className="font-weight-bold">
