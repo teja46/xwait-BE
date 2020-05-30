@@ -7,9 +7,9 @@ exports.getStores = (req, res) => {
   res.set("Access-Control-Max-Age", "3600");
   db.collection("stores")
     .get()
-    .then(data => {
+    .then((data) => {
       let stores = [];
-      data.forEach(doc => {
+      data.forEach((doc) => {
         stores.push({
           id: doc.id,
           name: doc.data().name,
@@ -22,12 +22,12 @@ exports.getStores = (req, res) => {
           longitude: doc.data().longitude,
           startPrice: doc.data().startPrice,
           storeDescription: doc.data().description,
-          storeImage: doc.data().storeImg
+          storeImage: doc.data().storeImage,
         });
       });
       return res.json(stores);
     })
-    .catch(err => {
+    .catch((err) => {
       res.status(500).json({ error: err });
     });
 };

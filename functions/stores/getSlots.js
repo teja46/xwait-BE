@@ -7,27 +7,19 @@ exports.getSlots = (req, res) => {
   res.set("Access-Control-Max-Age", "3600");
   let slotData = {};
 
-  db.doc(`/stores/${req.params.storeId}`)
+  db.collection("slots")
+    .where("storeId", "==", req.params.storeId)
+    .where("slotDate", "==", req.params.slotDate)
+    .where("serviceId", "==", req.params.serviceId)
     .get()
-    .then(doc => {
-      if (!doc.exists) {
-        return res.status(404).json({ error: "Store not found" });
-      }
-      return db
-        .collection("slots")
-        .where("storeId", "==", req.params.storeId)
-        .where("slotDate", "==", req.params.slotDate)
-        .where("serviceId", "==", req.params.serviceId)
-        .get();
-    })
-    .then(data => {
+    .then((data) => {
       slotData.slots = [];
-      data.forEach(doc => {
+      data.forEach((doc) => {
         slotData.slots.push({ slotId: doc.id, data: doc.data() });
       });
       return res.json(slotData);
     })
-    .catch(err => {
+    .catch((err) => {
       console.error(err);
       return res.status(404).json({ error: err.code });
     });

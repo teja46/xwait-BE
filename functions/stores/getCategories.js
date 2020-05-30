@@ -4,9 +4,9 @@ exports.getCategories = (req, res) => {
   db.collection("stores")
     .where("type", "==", req.params.type)
     .get()
-    .then(data => {
+    .then((data) => {
       let stores = [];
-      data.forEach(doc => {
+      data.forEach((doc) => {
         stores.push({
           id: doc.id,
           name: doc.data().name,
@@ -19,12 +19,12 @@ exports.getCategories = (req, res) => {
           longitude: doc.data().longitude,
           startPrice: doc.data().startPrice,
           storeDescription: doc.data().description,
-          storeImage: doc.data().storeImg
+          storeImage: doc.data().storeImage,
         });
       });
       return res.json(stores);
     })
-    .catch(err => {
+    .catch((err) => {
       res.status(500).json({ error: err });
     });
 };

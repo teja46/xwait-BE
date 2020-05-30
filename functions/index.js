@@ -6,6 +6,7 @@ const { db, admin } = require("./util/admin");
 // const FbAuth = require("./util/fbAuth");
 const { signUp, login } = require("./users/users");
 const { signupGoogleUser } = require("./users/signupGoogleUser");
+const { signUpMobileUser } = require("./users/signUpMobileUser");
 const { updateUserToken } = require("./users/updateUserToken");
 const { contactUs } = require("./users/contactUs");
 const { addStore } = require("./stores/addStore");
@@ -19,6 +20,7 @@ const { getCategories } = require("./stores/getCategories");
 const { cancelBooking } = require("./stores/cancelBooking");
 const { viewSlots } = require("./stores/viewSlots");
 const { getServiceTypes } = require("./stores/getServiceTypes");
+const { getServiceTypesStore } = require("./stores/getServiceTypesStore");
 const { addServiceTypes } = require("./stores/addServiceTypes");
 const { completeBooking } = require("./stores/completeBooking");
 const { getPendingBookings } = require("./stores/getPendingBookings");
@@ -33,6 +35,7 @@ app.use(cors());
 // User Login
 app.post("/signup", signUp);
 app.post("/signupGoogleUser", signupGoogleUser);
+app.post("/signUpMobileUser", signUpMobileUser);
 app.post("/login", login);
 app.post("/updateUserToken", updateUserToken);
 app.post("/updateStoreToken", updateStoreToken);
@@ -60,6 +63,9 @@ app.post("/addServiceTypes", addServiceTypes);
 
 // get service types
 app.get("/getServiceTypes/:storeId", getServiceTypes);
+
+// get service types storedetails
+app.get("/getServiceTypesStore/:storeCode", getServiceTypesStore);
 
 // get specific stores
 app.get("/getCategories/:type", getCategories);
@@ -91,43 +97,44 @@ app.get("/bookingHistory/:bookingDate/:storeId", bookingHistory);
 
 exports.createNotificationOnCreate = functions.firestore
   .document(`bookSlot/{slotId}`)
-  .onCreate(snapshot => {
+  .onCreate((snapshot) => {
     const data = snapshot.data();
     console.log(data);
     db.doc(`/stores/${data.storeId}`)
       .get()
-      .then(doc => {
+      .then((doc) => {
         console.log(doc.data());
+        // eslint-disable-next-line promise/always-return
         if (doc.data().token && doc.exists) {
           let message = {
             notification: {
               title: "New booking created",
-              body: "You have a new booking!!"
+              body: "You have a new booking!!",
             },
             webpush: {
               notification: {
                 title: "New booking created",
-                body: "You have a new booking!!"
+                body: "You have a new booking!!",
               },
               fcm_options: {
-                link: "https://www.google.com"
-              }
+                link: "https://www.google.com",
+              },
             },
-            token: doc.data().token
+            token: doc.data().token,
           };
           admin
             .messaging()
             .send(message)
-            .then(response => {
+            .then((response) => {
               // Response is a message ID string.
               console.log("Successfully sent message:", response);
             })
-            .catch(error => {
+            .catch((error) => {
               console.log("Error sending message:", error);
             });
         }
       })
-      .catch(err => console.log(err));
+      .catch((err) => console.log(err));
   });
 
 exports.createNotificationOnUpdate = functions.firestore
@@ -140,7 +147,7 @@ exports.createNotificationOnUpdate = functions.firestore
     ) {
       db.doc(`/users/${updatedData.userId}`)
         .get()
-        .then(doc => {
+        .then((doc) => {
           if (doc.data().token && doc.exists) {
             let messageBody = "";
             if (updatedData.bookingStatus === "Accepted") {
@@ -151,23 +158,23 @@ exports.createNotificationOnUpdate = functions.firestore
             let message = {
               notification: {
                 title: "Booking Status Changed",
-                body: messageBody
+                body: messageBody,
               },
-              token: doc.data().token
+              token: doc.data().token,
             };
             admin
               .messaging()
               .send(message)
-              .then(response => {
+              .then((response) => {
                 // Response is a message ID string.
                 console.log("Successfully sent message:", response);
               })
-              .catch(error => {
+              .catch((error) => {
                 console.log("Error sending message:", error);
               });
           }
         })
-        .catch(err => console.log(err));
+        .catch((err) => console.log(err));
     }
   });
 
